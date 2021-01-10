@@ -1,0 +1,175 @@
+<html>
+<head>
+	<title> slideshow </title>
+
+<style>
+	*{margin: 5px;padding: 5px;}
+	body{
+background-color: #fff;
+ background-repeat: no-repeat;
+  background-size: cover;
+}
+h1 {
+ 
+  color: white;
+}
+	h1{text-align: center;font-size: 52px;padding-bottom: 20px;}
+	
+   .slider{width:500px;height:180px;overflow:hidden;}
+   
+   #id6,#id7,#id8,#id9,#id10{display:none;}
+   
+   .outerdivision{max-width: 1000px;margin: 5px auto;border: 8px inset yellow;padding: 10px;}
+   
+   .innerdivision{display:flex;}
+   
+   .visible{display:block;}
+   
+	img{width: 100%;height: 100%;}
+	
+	.button{text-align:right;}
+	
+	a{padding: 10px;background-color: red;color: pink;border-radius: 5px;margin-right: 20px;width:230px;}
+	
+	.right{margin-right:6px;}
+</style>
+</head>
+<body>
+	<h1><i><u><b>SLIDES</b></u></i>
+<div class="outerdivision">
+<div class="innerdivision">
+<div id = "id1" class="slider" class="visible" data-value="1"><img src="C:\Users\hp\OneDrive\Desktop\img5.jpg"></div>
+<div id= "id2" class="slider" class="visible" data-value="2"><img src="C:\Users\hp\OneDrive\Desktop\img6.jpg"></div>
+<div  id= "id3" class="slider" class="visible" data-value="3"><img src="C:\Users\hp\OneDrive\Desktop\img7.jpg"></div>
+<div  id= "id4" class="slider" class="visible" data-value="4"><img src="C:\Users\hp\OneDrive\Desktop\img8.jpg"></div>
+<div  id= "id5" class="slider" class="visible" data-value="5"><img src="C:\Users\hp\OneDrive\Desktop\img9.jpg"></div>
+<div  id = "id6" class="slider" data-value="6"><img src="C:\Users\hp\OneDrive\Desktop\img1.jpg"></div>
+<div id = "id7" class="slider" data-value="7"><img src="C:\Users\hp\OneDrive\Desktop\img10.jpg"></div>
+<div id= "id8" class="slider" data-value="8"><img src="C:\Users\hp\OneDrive\Desktop\img2.jpg"></div>
+<div id = "id9" class="slider" data-value="9"><img src="C:\Users\hp\OneDrive\Desktop\img4.jpg"></div>
+<div  id = "id10" class="slider" data-value="10"><img src="C:\Users\hp\OneDrive\Desktop\img3.jpg"></div>
+</div>
+
+</div>
+<br>
+<div class="button">
+	<!-- <a class="left" onclick="nextSlideL()" id="p">PRIVIOUS </a>  --> 
+	<a class="right" onclick="nextSlideR()" id="q">>></a>
+</div>
+
+
+
+<script type="text/javascript">
+	var Slidervalue = document.getElementsByClassName('slider');
+	var right= document.getElementById('q');
+	var s = 1;
+	var e = 5;
+	right.onclick = function(){ 
+		var value = document.getElementById("id"+s+"").getAttribute('data-value');
+		switch(value)
+		{
+			case "1":
+			{
+				document.getElementById("id"+(e+1)+"").style.display='block';
+				document.getElementById("id"+s+"").style.display = 'none';
+				s++;
+				e++;
+				break;
+			}
+			case "2":
+			{
+				document.getElementById("id"+(e+1)+"").style.display='block';
+				document.getElementById("id"+s+"").style.display = 'none';
+				s++;
+				e++;
+				break;
+			}
+			case "3":
+			{
+				document.getElementById("id"+(e+1)+"").style.display='block';
+				document.getElementById("id"+s+"").style.display = 'none';
+				s++;
+				e++;
+				break;
+			}
+			case "4":
+			{
+				document.getElementById("id"+(e+1)+"").style.display='block';
+				document.getElementById("id"+s+"").style.display = 'none';
+				s++;
+				e++;
+				break;
+			}
+			case "5":
+			{
+				document.getElementById("id"+(e+1)+"").style.display='block';
+				document.getElementById("id"+s+"").style.display = 'none';
+				s++;
+				e++;
+				break;
+			}
+			defalut:
+			{
+				alert('somthing went wrong');
+			}
+
+		}
+	}
+	
+	var left = document.getElementById('p'); 
+	sq = 6;
+	eq = 10;
+	left.onclick = function(){ 
+		var valuer = document.getElementById("id"+e+"").getAttribute('data-value');
+		switch(valuer)
+		{
+			case "6":
+			{
+				document.getElementById("id"+(sq-1)+"").style.display='block';
+				document.getElementById("id"+eq+"").style.display = 'none';
+				sq--;
+				eq--;
+				break;
+			}
+			case "7":
+			{
+				document.getElementById("id"+(sq-1)+"").style.display='block';
+				document.getElementById("id"+eq+"").style.display = 'none';
+				sq--;
+				eq--;
+				break;
+			}
+			case "8":
+			{
+				document.getElementById("id"+(sq-1)+"").style.display='block';
+				document.getElementById("id"+eq+"").style.display = 'none';
+				sq--;
+				eq--;
+				break;
+			}
+			case "9":
+			{
+				document.getElementById("id"+(sq-1)+"").style.display='block';
+				document.getElementById("id"+eq+"").style.display = 'none';
+				sq--;
+				eq--;
+				break;
+			}
+			case "10":
+			{
+				document.getElementById("id"+(sq-1)+"").style.display='block';
+				document.getElementById("id"+eq+"").style.display = 'none';
+				sq--;
+				eq--;
+				break;
+			}
+			defalut:
+			{
+				alert(' wrong');
+			}
+
+		}
+	}
+</script>
+</body>
+</html>
